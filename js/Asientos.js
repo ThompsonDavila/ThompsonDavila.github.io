@@ -170,3 +170,7 @@ function obtenerDatos() {
     mail = urlParams.get('Mail');
     console.log(nom, mail);
 }
+
+function salir() {
+    window.location.href = 'https://thompsondavila.github.io/index.html';
+}
