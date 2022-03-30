@@ -147,7 +147,7 @@ function registroExitoso() {
    
     if(asientosSeleccionados.length === 0){
         mostrar_alerta('Debes seleccionar al menos un asiento');
-    }else if(asientosSeleccionados.length >= 3){
+    }else if(asientosSeleccionados.length >= 4){
         mostrar_alerta('Solo se permite reservar 3 asientos maximo');
     }else{
         mostrar_alerta('Espera un momento...', 'success');
