@@ -144,11 +144,17 @@ function cancelar() {
 
 
 function registroExitoso() {
-    mostrar_alerta('Espera un momento...', 'success');
    
-    setTimeout(function () {
-        window.location.href = `https://thompsondavila.github.io/sistema/RegistroExitoso.html?Name=${nom}&Mail=${mail}&Asientos=${asientosSeleccionados}`;
-    }, 1000);
+    if(asientosSeleccionados.length === 0){
+        mostrar_alerta('Debes seleccionar al menos un asiento');
+    }else if(asientosSeleccionados.length >= 3){
+        mostrar_alerta('Solo se permite reservar 3 asientos maximo');
+    }else{
+        mostrar_alerta('Espera un momento...', 'success');
+        setTimeout(function () {
+            window.location.href = `https://thompsondavila.github.io/sistema/RegistroExitoso.html?Name=${nom}&Mail=${mail}&Asientos=${asientosSeleccionados}`;
+        }, 1000);
+    }
 }
 
 var nom;
