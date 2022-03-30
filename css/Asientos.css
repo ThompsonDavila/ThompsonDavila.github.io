@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sectionPrincipal {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #f1f1f1;
+    max-height: 45rem;
+}
+
+.btnCancelar {
+    background: red;
+    position: absolute;
+    bottom: 1rem;
+    left: calc(42% - 4rem);
+    width: 8rem;
+    height: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnContinuar {
+    background: green;
+    position: absolute;
+    bottom: 1rem;
+    right: calc(42% - 4rem);
+    width: 8rem;
+    height: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.btnCancelar:hover, .btnContinuar:hover{
+    background: yellow;
+    color: #000;
+    font-weight: bold;
+}
+
+.contEscenario {
+    width: 60%;
+    height: 30%;
+    background: url(../image/telon.png);
+    background-size: cover;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.contEscenario img {
+    width: 100px;
+    height: 100px;
+    margin-top: 1rem;
+}
+
+.contAsientos {
+    width: 100%;
+    height: 65%;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 41rem;
+    padding-bottom: 2rem;
+}
+
+.contBloques {
+    width: 25rem;
+    height: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.asiento {
+    width: 3rem;
+    height: 3rem;
+    background: url(../image/asiento.png);
+    background-size: 100%;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 12px;
+    position: relative;
+}
+
+.asiento span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    border-radius: 5px;
+    color: #002f83;
+    font-size: 10px;
+    font-weight: bolder;
+    position: absolute;
+    top: -8px;
+    transition: 0.5s;
+}
+
+.asiento span:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#bloqueIzquierdo {
+    transform: rotate(8deg);
+    position: relative;
+    top: -2rem;
+    left: 1rem;
+}
+
+#bloqueDerecho {
+    transform: rotate(-8deg);
+    position: relative;
+    top: -2rem;
+    left: -1rem;
+}
+
+.red {
+    background: #5bb501!important;
+    border-radius: 50%!important;
+    font-weight: 600!important;
+    opacity: 1!important;
+    top: 0px!important;
+    font-size: 18px!important;
+    color: #fff!important;
+    box-shadow: 0px 0px 15px 0px #808080b3;
+}

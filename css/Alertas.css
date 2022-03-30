@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+.system-alerts {
+    position: fixed;
+    z-index: 1080;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    display: flex;
+    width: 35%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.color-red {
+    color: #f00;
+}
+
+.ico-alert {
+    color: rgb(255 0 0 / 50%);
+    animation: swing 1.25s ease;
+    animation-iteration-count: infinite;
+}
+
+.system-alert.alert {
+    width: calc(100% - 64px);
+    padding: 0;
+    padding-left: 64px;
+    border-radius: 0;
+    box-shadow: -4px 4px 24px 1px rgb(0 0 0 / 50%);
+    margin: 14px 32px;
+    animation-fill-mode: forwards!important;
+    border: 0;
+    cursor: pointer;
+    display: inherit;
+    position: relative;
+}
+
+@keyframes statuswidth {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.system-alert.alert .time {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    animation: statuswidth 5s ease;
+    box-shadow: 0 0 4px 1px #fff;
+}
+
+.system-alert.alert.danger {
+    background-color: #db324d;
+    border-left: 4px #DF2935 solid;
+}
+
+.system-alert.alert.success {
+    color: #fff;
+    border-left: 4px #59A96A solid;
+    background-color: #08605f;
+}
+
+.system-alert.alert.fadeInUp {
+    animation: fadeInUp 0.5s ease;
+}
+
+.system-alert.alert.fadeOutDown {
+    animation: fadeOutDown 0.5s ease;
+}
+
+.system-alert.alert p {
+    font-size: 15.75px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+    color: #000000;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.system-alert.alert.success p {
+    color: #fff!important;
+}
+
+.system-alert.alert p .atext {
+    color: #fff!important;
+    padding: 0;
+}
+
+.system-alert.alert.danger p {
+    color: #fff!important;
+}
+
+.system-alert.alert p .svg-image {
+    width: 64px;
+}
+
+.system-alert.alert p .svg-image img {
+    width: 48px;
+    height: 48px;
+    animation: flash 3s infinite;
+}
+
+.system-alert.alert .close {
+    position: absolute;
+    width: 64px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 15%);
+    opacity: 1;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    transition: box-shadow 0.25s ease;
+    outline: 0;
+    border: 0;
+}
+
+.system-alert.alert .copy {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    opacity: 1;
+    font-size: 19px;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-flex;
+    margin: 0;
+    color: rgb(0 0 0 / 25%);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.system-alert.alert .copy i {
+    animation: flash 2.5s infinite;
+}
+
+.system-alert.alert .copy:hover {
+    background-color: rgb(0 0 0 / 0.1);
+}
+
+.system-alert.alert .close:focus, .system-alert.alert .close:hover {
+    outline: 0;
+    background-color: #db324d;
+    box-shadow: 0 0 24px 1px #db324d;
+}
+
+.system-alert.alert textarea {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.system-alert.alert.success .close:focus, .system-alert.alert.success .close:hover {
+    outline: 0;
+    background-color: #3f826d;
+    box-shadow: 0 0 24px 1px #3f826d;
+}
+
+@media(max-width: 992px){
+    .system-alerts {
+        width: 100%;
+    }
+}
